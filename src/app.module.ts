@@ -25,8 +25,8 @@ import { TonCheckerService } from './ton-checker.service';
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         uri: configService.getOrThrow('MONGO_CONNECTION_STRING'),
-        user: 'root',
-        pass: 'example',
+        user: configService.getOrThrow('MONGO_USER'),
+        pass: configService.getOrThrow('MONGO_PASSWORD'),
       }),
     }),
     BotProviderModule.forRoot(),

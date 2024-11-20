@@ -21,7 +21,8 @@ FROM node:alpine AS runner
 # Copy node modules and build directory
 COPY --from=build ./node_modules ./node_modules
 COPY --from=build /dist /dist
+COPY .env ./
 
 # Expose port 3000
 EXPOSE 3000
-CMD ["dist/src/server.js"]
+CMD ["dist/main.js"]
