@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "tgBot",
+      "script": "npm",
+      "args": "run start:prod"
+    }
+  ]
+}
