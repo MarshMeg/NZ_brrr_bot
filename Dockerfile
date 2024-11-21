@@ -5,15 +5,14 @@ COPY package.json ./
 COPY yarn.lock ./
 
 # Install dependencys
-RUN yarn install
+RUN npm install
 
 # Copy source
 COPY src ./src
 COPY tsconfig.json ./tsconfig.json
-#COPY openapi.yml ./openapi.yml
 
 # Build
-RUN yarn build
+RUN npm build
 
 # Start production image build
 FROM node:alpine AS runner
