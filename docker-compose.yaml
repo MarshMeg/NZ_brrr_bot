@@ -9,9 +9,10 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
 
-  express:
-    build: .
-    ports:
-      - 3000:3000
-    depends_on:
-      - mongodb
+#  express:
+#    build: .
+#    ports:
+#      - 3000:3000
+#    depends_on:
+#      - mongodb
+#    restart: always
